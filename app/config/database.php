@@ -53,14 +53,14 @@ return array(
 		),
 
 		'mysql' => array(
-			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'rcabdir',
-			'username'  => 'root',
-			'password'  => 'anpa9H9pWb',
-			'charset'   => 'utf8',
-			'collation' => 'utf8_unicode_ci',
-			'prefix'    => '',
+    		'driver'    => 'mysql',
+    		'host'      => 'localhost',
+    		'database'  => 'dbtest',
+    		'username'  => 'root',
+    		'password'  => 'anpa9H9pWb',
+    		'charset'   => 'utf8',
+    		'collation' => 'utf8_unicode_ci',
+    		'prefix'    => '',
 		),
 
 		'pgsql' => array(
