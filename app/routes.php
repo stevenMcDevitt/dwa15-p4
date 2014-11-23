@@ -72,6 +72,8 @@ Route::get('/debug', function() {
         echo '<strong style="background-color:crimson; padding:5px;">Caught exception: ', $e->getMessage(), "</strong>\n";
     }
 
+    print_r(Input::all());
+
     echo '</pre>';
 
 });
