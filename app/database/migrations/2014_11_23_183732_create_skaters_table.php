@@ -15,15 +15,14 @@ class CreateSkatersTable extends Migration {
 
     	Schema::create('skaters', function($table) {
 
-        	$table->increments('id');
+        	$table->increments('id')->unsigned();
         	$table->timestamps();
 
         	$table->string('last_name');
-        	$table->string('firt_name');
-        	$table->integer('date_of_birth');
-        	$table->string('moves_test_level');
-        	$table->string('freestyle_test_level');
-         	$table->string('test_column');
+        	$table->string('first_name');
+        	$table->date('date_of_birth');
+        	$table->string('moves_test_level')->nullable;
+        	$table->string('freestyle_test_level')->nullable;
 
     	});
 
