@@ -15,13 +15,14 @@ class CreateTeamsTable extends Migration {
 	
 	    Schema::create('teams', function($table) {
 
-        	$table->increments('id');
-        	$table->timestamps();
+        	$table->increments('id')->unsigned();
 
         	$table->string('team_name');
         	$table->string('competition_level');
-         	$table->string('test_column');
+        	$table->integer('minimum_team_size');
+        	$table->integer('maximum_team_size');
 
+        	$table->timestamps();
     	});
 
 	}

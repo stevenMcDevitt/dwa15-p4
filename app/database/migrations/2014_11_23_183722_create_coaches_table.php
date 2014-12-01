@@ -15,13 +15,13 @@ class CreateCoachesTable extends Migration {
 
 	    Schema::create('coaches', function($table) {
 
-        	$table->increments('id');
-        	$table->timestamps();
+        	$table->increments('id')->unsigned();
 
         	$table->string('last_name');
          	$table->string('first_name');
          	$table->string('role');
-         	$table->string('test_column');
+
+        	$table->timestamps();
 
     	});
     	
