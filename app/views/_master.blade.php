@@ -74,7 +74,7 @@
                     <p class="bottom-sep"></p>
                     <h1>Links to Project</h1>
                     <p><a href="http://p4.iitbotftbd.com">Link to Project 4 Site</a></p>
-                    <p><a href="https://github.com/stevenMcDevitt/dwa15-p4.git">Link to Project 3 Github Repository</a></p>
+                    <p><a href="https://github.com/stevenMcDevitt/dwa15-p4.git">Link to Project 4 Github Repository</a></p>
                     <p class="bottom-sep"></p>
                 </div>
 
