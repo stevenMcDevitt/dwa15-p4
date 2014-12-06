@@ -1,7 +1,7 @@
 @extends('_master')
 
 @section('title')
-	DWA15 P4 - Main Test Page
+	DWA15 P4 - S2TMS
 @stop
 
 @section('head')

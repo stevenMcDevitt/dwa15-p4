@@ -28,7 +28,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" href="http://p1.iitbotftbd.com">DWA15</a>
+                            <a class="navbar-brand" href="http://p4.iitbotftbd.com">DWA15</a>
                         </div>
                         <div class="collapse navbar-collapse" id="navbar-collapse-100">
                             <ul class="nav navbar-nav">

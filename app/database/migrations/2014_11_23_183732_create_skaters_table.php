@@ -20,6 +20,7 @@ class CreateSkatersTable extends Migration {
         	$table->string('last_name');
         	$table->string('first_name');
         	$table->date('date_of_birth');
+        	$table->float('competition_age');
         	$table->string('moves_test_level')->nullable;
         	$table->string('freestyle_test_level')->nullable;
 
