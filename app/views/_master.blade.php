@@ -37,16 +37,7 @@
                                 <li><a href="http://p3.iitbotftbd.com">P3-ProgWork</a></li>
                                 <li class=active><a href="http://p4.iitbotftbd.com">P4-S2TMS</a></li>
                             </ul>
-                            <form class="navbar-form navbar-right" role="search">
-                                <div class="input-group custom-search-form">
-                                    <input type="text" class="form-control">
-                                        <span class="input-group-btn">
-                                            <button class="btn btn-default" type="button">
-                                                <span class="glyphicon glyphicon-search"></span>
-                                            </button>
-                                        </span>
-                                </div>
-                            </form>
+
                         </div>
                     </div>
                 </nav>
@@ -65,10 +56,17 @@
 
             <div class="row">
                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-	
-	               @yield('content')
+                    
+                            <h2><a href='/teams'> Teams </a>
+                            <a href='/skaters'> Skaters </a>
+                            <a href='/coaches'> Coaches </a>
+                            <a href='/clubs'> Clubs </a></h2>
 
-	               @yield('results')
+                    <p class="bottom-sep"></p>
+	
+	                @yield('content')
+
+	                @yield('results')
 
                     <br>
                     <p class="bottom-sep"></p>
