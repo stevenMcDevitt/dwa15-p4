@@ -5,21 +5,23 @@
 @stop
 
 @section('head')
-	
+
 @stop
 
+@section('jumbotron')
+    USFSA Figure Sakting Clubs
+@stop
 
 @section('content')
-
-    <h2>USFSA Figure Sakting Clubs</h2>
-    <br>
-
+	<br>
     <table class="table table-striped table-bordered">
     	<thead>
     		<tr>
     			<th>Id</th>
     			<th>Club Name</th>
     			<th>Club Locality</th>
+    			<th></th>
+    			<th></th>
     		</tr>
     	</thead>
 
@@ -30,6 +32,8 @@
     				<td>{{$club->id}}</td>
     				<td>{{$club->club_name}}</td>
     				<td>{{$club->club_locality}}</td>
+    				<td><a href='/club/{{$club->id}}'>Details</a></td>
+    				<td>Edit</td>
     			</tr>
     		@endforeach
 		</tbody>

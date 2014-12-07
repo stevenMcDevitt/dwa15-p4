@@ -15,7 +15,9 @@ class ClubController extends \BaseController {
 */
 	public function index() {
 
-		$clubs = Club::all();
+		$clubs = Club::where('id','<>',0)
+			->orderBy('club_name')
+			->get();
 		
 		return View::make('club_index')->with('clubs',$clubs);
 
@@ -79,7 +81,7 @@ class ClubController extends \BaseController {
 			$club = Club::findOrFail($id);
 		}
 		catch(Exception $e) {
-			return Redirect::to('/club')->with('flash_message', 'EDIT - Club not found');
+			return Redirect::to('/club')->with('flash_message', 'Club not found');
 		}
 
 		return View::make('club_edit')->with('club', $club);
@@ -98,12 +100,13 @@ class ClubController extends \BaseController {
 			$club = Club::findOrFail($id);
 		}
 		catch(Exception $e) {
-			return Redirect::to('/club')->with('flash_message', 'UPDATE - Club not found');
+			return Redirect::to('/club')->with('flash_message', 'Club not found');
 		}
+
 		$club->club_name = Input::get('name');
 		$club->save();
 
-		return Redirect::action('ClubController@index')->with('flash_message','UPDATE - Your Club has been saved.');
+		return Redirect::action('ClubController@index')->with('flash_message','Your Club has been saved.');
 
 	}
 

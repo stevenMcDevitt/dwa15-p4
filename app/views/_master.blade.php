@@ -6,10 +6,10 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
-    <link href="css/normalize.css" rel="stylesheet" >
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <link href="/css/normalize.css" rel="stylesheet" >
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
+    <script src="/js/vendor/modernizr-2.6.2.min.js"></script>
 
 	@yield('head')
 
@@ -37,7 +37,6 @@
                                 <li><a href="http://p3.iitbotftbd.com">P3-ProgWork</a></li>
                                 <li class=active><a href="http://p4.iitbotftbd.com">P4-S2TMS</a></li>
                             </ul>
-
                         </div>
                     </div>
                 </nav>
@@ -56,17 +55,19 @@
 
             <div class="row">
                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+
+                    <p class="bottom-sep"></p>
                     
                             <h2><a href='/teams'> Teams </a>
                             <a href='/skaters'> Skaters </a>
                             <a href='/coaches'> Coaches </a>
-                            <a href='/clubs'> Clubs </a></h2>
+                            <a href='/club'> Clubs </a></h2>
 
                     <p class="bottom-sep"></p>
 	
 	                @yield('content')
 
-	                @yield('results')
+                    @yield('results')
 
                     <br>
                     <p class="bottom-sep"></p>
@@ -76,7 +77,7 @@
                     <p class="bottom-sep"></p>
                 </div>
 
-            <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
+                <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
                     <div class="sidebar">
                         <h2>It Is The Business Of The Future To Be Dangerous</h2>
                     </div>
@@ -94,8 +95,8 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/main.js"></script>
+        <script src="/js/plugins.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/main.js"></script>
 </body>
 </html>
