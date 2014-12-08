@@ -457,9 +457,21 @@ div {
     height: 272px;
 }
 
+.flash-message {
+    text-align: center;
+    background-color: darkblue;
+    position: absolute;
+    width: 100%;
+    top: 50;
+    left: 0;
+    height: 50;
+    z-index: 100;
+    font-size: 2em;
+    color: #FFF;
+    text-decoration: none;
+}
+
 /*
-
-
 
 h1 {
      text-align: center;
@@ -483,29 +495,6 @@ legend {
 input, textarea {
      margin-top: 10px;
      background-color: lightyellow;
-}
-
-#clergyContactUpdate label {
-    width: 125px;
-    margin-top: 3px;
-    float: left;
-    padding: 3px;
-    padding-top: 5px;
-}
-
-#clergyContectUpdate input {
-    height: 25px;
-    padding: 3px;
-}
-
-#clergyContactupdate select {
-    height: 25px; 
-    padding: 3px;
-}
-
-#clergyContactUpdate textarea {
-     padding: 8px;
-     width: 500px;
 }
 
 button {

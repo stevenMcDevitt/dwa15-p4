@@ -43,6 +43,9 @@
             </div>
         </header>
 
+        @if(Session::get('flash_message'))
+            <div class="flash-message"> {{ Session::get('flash_message') }} </div>
+        @endif
 
         <div class="container">
             <div class="row">
@@ -94,7 +97,7 @@
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="/js/plugins.js"></script>
         <script src="/js/bootstrap.min.js"></script>
         <script src="/js/main.js"></script>

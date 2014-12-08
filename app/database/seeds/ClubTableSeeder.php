@@ -6,18 +6,36 @@ class ClubTableSeeder extends Seeder {
 	{
 
 		$club = Club::create(array(
-                        'club_name' => 'Hayden Figure Skating Club',
-                        'club_locality' => 'Lexington, MA'
+                        'club_name'     => 'Hayden Figure Skating Club',
+                        'club_locality' => 'Lexington, MA',
+                        'club_address1' => '24 Lincoln St',
+                        'club_address2' => 'Suite 12',
+                        'club_city'     => 'Lexington',
+                        'club_state'    => 'MA',
+                        'club_zip'      => '02421',
+                        'club_website'  => 'www.hwhayden.org'
 		));
 
                 $club = Club::create(array(
-                        'club_name' => 'Colonial Skating Club',
-                        'club_locality' => 'Acton, MA'
+                        'club_name'     => 'Colonial Skating Club',
+                        'club_locality' => 'Boxborough, MA',
+                        'club_address1' => '34 Massachusetts Ave',
+                        'club_address2' => '',
+                        'club_city'     => 'Boxborough',
+                        'club_state'    => 'MA',
+                        'club_zip'      => '01719',
+                        'club_website'  => 'www.colonialfsc.org'
                 ));
 
                 $club = Club::create(array(
-                        'club_name' => 'Skating Club of Boston',
-                        'club_locality' => 'Boston, MA'
+                        'club_name'     => 'Skating Club of Boston',
+                        'club_locality' => 'Boston, MA',
+                        'club_address1' => '1240 Soldiers Field Rd',
+                        'club_address2' => '',
+                        'club_city'     => 'Brighton',
+                        'club_state'    => 'MA',
+                        'club_zip'      => '02135',
+                        'club_website'  => 'www.scboston.org'
                 ));
 
                 $club = Club::create(array(

@@ -37,9 +37,13 @@ Route::get('/', function() {
 |--------------------------------------|
 */
 
+/*
 Route::get('/club', 'ClubController@index');
-
 Route::get('/club/{id}', 'ClubController@show');
+*/
+
+Route::resource('club','ClubController');
+
 /*
 |--------------------------------------------------------------------------
 | Development and Debugging Routes
