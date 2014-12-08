@@ -31,21 +31,22 @@
                             <a class="navbar-brand" href="http://p4.iitbotftbd.com">DWA15</a>
                         </div>
                         <div class="collapse navbar-collapse" id="navbar-collapse-100">
-                            <ul class="nav navbar-nav">
-                                <li><a href="http://p1.iitbotftbd.com">P1-Portfolio</a></li>
-                                <li><a href="http://p2.iitbotftbd.com">P2-xkcdPwD</a></li>
-                                <li><a href="http://p3.iitbotftbd.com">P3-ProgWork</a></li>
-                                <li class=active><a href="http://p4.iitbotftbd.com">P4-S2TMS</a></li>
-                            </ul>
+
+                            @if(Session::get('flash_message'))
+                                <div class="flash-message"> {{ Session::get('flash_message') }} </div>
+                            @else
+                                <ul class="nav navbar-nav">
+                                    <li><a href="http://p1.iitbotftbd.com">P1-Portfolio</a></li>
+                                    <li><a href="http://p2.iitbotftbd.com">P2-xkcdPwD</a></li>
+                                    <li><a href="http://p3.iitbotftbd.com">P3-ProgWork</a></li>
+                                    <li class=active><a href="http://p4.iitbotftbd.com">P4-S2TMS</a></li>
+                                </ul>
+                            @endif
                         </div>
                     </div>
                 </nav>
             </div>
         </header>
-
-        @if(Session::get('flash_message'))
-            <div class="flash-message"> {{ Session::get('flash_message') }} </div>
-        @endif
 
         <div class="container">
             <div class="row">
