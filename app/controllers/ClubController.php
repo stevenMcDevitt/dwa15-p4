@@ -28,7 +28,6 @@ class ClubController extends \BaseController {
 | Create a New Club                    |
 |--------------------------------------|
 */
-
 	public function create() {
 
 		return View::make('club_create');
@@ -40,13 +39,12 @@ class ClubController extends \BaseController {
 | Store Club Data                      |
 |--------------------------------------|
 */
-
 	public function store() {
 
 		$club = new Club;
 		$club->club_name = Input::get('name');
 		$club->save();
-		return Redirect::action('ClubController@index')->with('flash_message','Store -- Your Club has been added.');
+		return Redirect::action('ClubController@index')->with('flash_message','The club added has been saved.');
 
 	}
 
@@ -55,14 +53,13 @@ class ClubController extends \BaseController {
 | Display Particular Club Data         |
 |--------------------------------------|
 */
-
 	public function show($id) {
 
 		try {
 			$club = Club::findOrFail($id);
 		}
 		catch(Exception $e) {
-			return Redirect::to('/club')->with('flash_message', 'SHOW - Club not found');
+			return Redirect::to('/club')->with('flash_message', 'The club you were seeking was not found');
 		}
 
 		return View::make('club_show')->with('club', $club);
@@ -74,14 +71,13 @@ class ClubController extends \BaseController {
 | Display Particular Club Data         |
 |--------------------------------------|
 */
-
 	public function edit($id) {
 
 		try {
 			$club = Club::findOrFail($id);
 		}
 		catch(Exception $e) {
-			return Redirect::to('/club')->with('flash_message', 'Club not found');
+			return Redirect::to('/club')->with('flash_message', 'The club you were seeking was not found');
 		}
 
 		return View::make('club_edit')->with('club', $club);
@@ -93,7 +89,6 @@ class ClubController extends \BaseController {
 | Update Particular Club Data          |
 |--------------------------------------|
 */
-
 	public function update($id) {
 
 		try {
@@ -103,10 +98,12 @@ class ClubController extends \BaseController {
 			return Redirect::to('/club')->with('flash_message', 'Club not found');
 		}
 
-		$club->club_name = Input::get('name');
+		$club->club_name     = Input::get('club_name');
+		$club->club_locality = Input::get('club_locality');
+		
 		$club->save();
 
-		return Redirect::action('ClubController@index')->with('flash_message','Your Club has been saved.');
+		return Redirect::action('ClubController@index')->with('flash_message','The club you updated has been saved.');
 
 	}
 
@@ -115,20 +112,20 @@ class ClubController extends \BaseController {
 | Display Particular Club Data         |
 |--------------------------------------|
 */
-
 	public function destroy($id) {
 
 		try {
 			$club = Club::findOrFail($id);
 		}
 		catch(Exception $e) {
-			return Redirect::to('/club')->with('flash_message', 'DESTROY - Club not found');
+			return Redirect::to('/club')->with('flash_message', 'The club you selected was not found');
 		}
 
 		Club::destroy($id);
 
-		return Redirect::action('ClubController@index')->with('flash_message','DESTROY - Your club has been deleted.');
+		return Redirect::action('ClubController@index')->with('flash_message','The club you selected has been deleted.');
 
 	}
 }
+
 

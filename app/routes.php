@@ -23,6 +23,7 @@ Route::get('/', function() {
 |--------------------------------------|
 */
 
+Route::resource('skater','SkaterController');
 
 /*
 |--------------------------------------|
@@ -40,6 +41,9 @@ Route::get('/', function() {
 /*
 Route::get('/club', 'ClubController@index');
 Route::get('/club/{id}', 'ClubController@show');
+*/
+
+/* Route::get('/club/{id}/edit', 'ClubController@edit');
 */
 
 Route::resource('club','ClubController');

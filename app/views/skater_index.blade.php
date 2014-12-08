@@ -9,7 +9,7 @@
 @stop
 
 @section('jumbotron')
-    USFSA Figure Sakting Clubs
+    List of Skaters
 @stop
 
 @section('content')
@@ -18,8 +18,8 @@
     	<thead>
     		<tr>
     			<th>Id</th>
-    			<th>Club Name</th>
-    			<th>Club Locality</th>
+    			<th>Last Name</th>
+    			<th>First Name</th>
     			<th></th>
     			<th></th>
     		</tr>
@@ -27,13 +27,13 @@
 
     	<tbody>
 
-    		@foreach($clubs as $club)
+    		@foreach($skaters as $skater)
     			<tr>
-    				<td>{{$club->id}}</td>
-    				<td>{{$club->club_name}}</td>
-    				<td>{{$club->club_locality}}</td>
-    				<td><a href='/club/{{$club->id}}'>Details</a></td>
-    				<td><a href='/club/{{$club->id}}/edit'>Edit</a></td>
+    				<td>{{$skater->id}}</td>
+    				<td>{{$skater->last_name}}</td>
+    				<td>{{$skater->first_name}}</td>
+    				<td><a href='/skater/{{$skater->id}}'>Details</a></td>
+    				<td>Edit</td>
     			</tr>
     		@endforeach
 		</tbody>

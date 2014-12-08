@@ -63,7 +63,7 @@
                     <p class="bottom-sep"></p>
                     
                             <h2><a href='/teams'> Teams </a>
-                            <a href='/skaters'> Skaters </a>
+                            <a href='/skater'> Skaters </a>
                             <a href='/coaches'> Coaches </a>
                             <a href='/club'> Clubs </a></h2>
 
