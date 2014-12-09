@@ -9,11 +9,11 @@
 @stop
 
 @section('jumbotron')
-    USFSA Figure Sakting Clubs
+    Figure Sakting Clubs
 @stop
 
 @section('content')
-	<br>
+
     <table class="table table-striped table-bordered">
     	<thead>
     		<tr>
@@ -22,6 +22,7 @@
     			<th>Club Locality</th>
     			<th></th>
     			<th></th>
+                <th></th>
     		</tr>
     	</thead>
 
@@ -34,6 +35,7 @@
     				<td>{{$club->club_locality}}</td>
     				<td><a href='/club/{{$club->id}}'>Details</a></td>
     				<td><a href='/club/{{$club->id}}/edit'>Edit</a></td>
+                    <td>Delete</td>
     			</tr>
     		@endforeach
 		</tbody>

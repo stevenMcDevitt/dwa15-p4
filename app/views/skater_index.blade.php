@@ -13,13 +13,13 @@
 @stop
 
 @section('content')
-	<br>
     <table class="table table-striped table-bordered">
     	<thead>
     		<tr>
     			<th>Id</th>
     			<th>Last Name</th>
     			<th>First Name</th>
+                <th>Age</th>
     			<th></th>
     			<th></th>
     		</tr>

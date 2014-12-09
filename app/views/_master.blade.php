@@ -58,7 +58,7 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                <div class="hidden-lg hidden-md col-sm-12 col-xs-12">
 
                     <p class="bottom-sep"></p>
                     
@@ -69,20 +69,27 @@
 
                     <p class="bottom-sep"></p>
 	
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+
 	                @yield('content')
 
                     @yield('results')
 
-                    <br>
-                    <p class="bottom-sep"></p>
-                    <h1>Links to Project</h1>
-                    <p><a href="http://p4.iitbotftbd.com">Link to Project 4 Site</a></p>
-                    <p><a href="https://github.com/stevenMcDevitt/dwa15-p4.git">Link to Project 4 Github Repository</a></p>
                     <p class="bottom-sep"></p>
                 </div>
 
                 <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
                     <div class="sidebar">
+
+                        <h2>Manage:</h2>
+                        <h2><a href='/teams'> Teams </a><br>
+                        <a href='/skater'> Skaters </a><br>
+                        <a href='/coaches'> Coaches </a><br>
+                        <a href='/club'> Clubs </a></h2>
+
+                        <p class="bottom-sep"></p>
+
                         <h2>It Is The Business Of The Future To Be Dangerous</h2>
                     </div>
                 </div>
