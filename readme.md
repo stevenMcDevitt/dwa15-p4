@@ -22,7 +22,7 @@ a database of skater, coach and team information.
 ## Demo
 A demo and presentation will be provided in the in-person section.
 
-## Details for teaching team
+## Details for Teaching Team
 The solution includes some features that would not ordinarily be included.  Skater records
 would not be deleted as there is a need to record the skating and team participation history
 of each skater.
@@ -30,6 +30,17 @@ of each skater.
 This solution is the beginning of a complete application that can be used to manage a large
 skating club organization.
 
-## Outside code
+The demonstration database is populated with 250 skater records and a representative number of
+skating team at various competition levels.  All of the CRUD activities are represented.
+
+
+## Features / Functions Not Yet Included
+* Ability to assign a skater to multiple teams.  This does occur on occcasion.
+* User authentication is not yet included
+* Team practice calendar and email notification reminders about practice and other team events
+* Tracking of STARS (Standardized Testing of Athleticism to Recognize Skaters), this is a set
+of 12 measurement tests that measure Agility/Balance/Coordination, Strength/Power and Flexibility
+
+## Outside Code
 * HTML5 Boilerplate: http://html5boilerplate.com/
 * Bootstrap: http://getbootstrap.com/
