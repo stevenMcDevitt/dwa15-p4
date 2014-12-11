@@ -93,6 +93,12 @@ textarea {
     padding: 0.2em 0;
 }
 
+.clubdata label {
+    width: 125px;
+    margin-top: 3px;
+    padding: 3px;
+    padding-top: 5px;
+}
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */

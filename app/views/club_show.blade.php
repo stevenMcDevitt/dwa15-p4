@@ -14,6 +14,17 @@
 
 @section('content')
 	<br>
+    <div>
+        ID: {{ $club->id }}
+    </div>
+    <div>
+        Club Name: {{ $club->club_name }}
+    </div>
+    <div>
+        Club Locality {{ $club->club_locality }}
+    </div>
+
+
     <table class="table">
     	<tbody>
     			<tr>

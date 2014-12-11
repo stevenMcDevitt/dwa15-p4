@@ -21,7 +21,6 @@
     			<th>First Name</th>
                 <th>Age</th>
     			<th></th>
-    			<th></th>
     		</tr>
     	</thead>
 
@@ -32,8 +31,10 @@
     				<td>{{$skater->id}}</td>
     				<td>{{$skater->last_name}}</td>
     				<td>{{$skater->first_name}}</td>
-    				<td><a href='/skater/{{$skater->id}}'>Details</a></td>
-    				<td>Edit</td>
+                    <td>{{$skater->competition_age}}</td>
+    				<td><a href='/skater/{{$skater->id}}'>Details</a>&nbsp
+    				    <a href='/skater/{{$skater->id}}'>Edit</a>&nbsp
+                    </td>
     			</tr>
     		@endforeach
 		</tbody>

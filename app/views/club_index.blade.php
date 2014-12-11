@@ -13,29 +13,31 @@
 @stop
 
 @section('content')
-
+    <br>
+    <h2><a href='/club/create'>+ Add a New Club</a></h2>
+    <br>
+    <p class="bottom-sep"></p>
     <table class="table table-striped table-bordered">
     	<thead>
     		<tr>
-    			<th>Id</th>
-    			<th>Club Name</th>
-    			<th>Club Locality</th>
-    			<th></th>
-    			<th></th>
-                <th></th>
+    			<th class="col-md-1">Id</th>
+    			<th class="col-md-4">Club Name</th>
+    			<th class="col-md-4">Club Locality</th>
+    			<th class="col-md-1"></th>
     		</tr>
     	</thead>
-
     	<tbody>
-
     		@foreach($clubs as $club)
     			<tr>
     				<td>{{$club->id}}</td>
     				<td>{{$club->club_name}}</td>
     				<td>{{$club->club_locality}}</td>
-    				<td><a href='/club/{{$club->id}}'>Details</a></td>
-    				<td><a href='/club/{{$club->id}}/edit'>Edit</a></td>
-                    <td>Delete</td>
+    				<td><a href='/club/{{$club->id}}'>Details</a><br>
+    				    <a href='/club/{{$club->id}}/edit'>Edit</a>
+                        {{ Form::open(['method' => 'DELETE', 'action' => ['ClubController@destroy', $club->id]]) }}
+                            <a href='javascript:void(0)' onClick='parentNode.submit();return false;'>Delete</a>
+                        {{ Form::close() }}
+                    </td>
     			</tr>
     		@endforeach
 		</tbody>

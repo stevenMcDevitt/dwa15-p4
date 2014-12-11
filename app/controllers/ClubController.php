@@ -42,7 +42,16 @@ class ClubController extends \BaseController {
 	public function store() {
 
 		$club = new Club;
-		$club->club_name = Input::get('name');
+
+		$club->club_name = Input::get('club_name');
+		$club->club_locality = Input::get('club_locality');
+		$club->club_address1 = Input::get('club_address1');
+		$club->club_address2 = Input::get('club_address2');
+		$club->club_city = Input::get('club_city');
+		$club->club_state = Input::get('club_state');
+		$club->club_zip = Input::get('club_zip');
+		$club->club_website = Input::get('club_website');
+
 		$club->save();
 		return Redirect::action('ClubController@index')->with('flash_message','The club added has been saved.');
 
@@ -100,7 +109,13 @@ class ClubController extends \BaseController {
 
 		$club->club_name     = Input::get('club_name');
 		$club->club_locality = Input::get('club_locality');
-		
+		$club->club_address1 = Input::get('club_address1');
+		$club->club_address2 = Input::get('club_address2');
+		$club->club_city     = Input::get('club_city');
+		$club->club_state    = Input::get('club_state');
+		$club->club_zip      = Input::get('club_zip');
+		$club->club_website  = Input::get('club_website');
+
 		$club->save();
 
 		return Redirect::action('ClubController@index')->with('flash_message','The club you updated has been saved.');
