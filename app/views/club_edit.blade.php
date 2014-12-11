@@ -9,10 +9,12 @@
 @stop
 
 @section('jumbotron')
-    Club Edit
+    Figure Skating Clubs
 @stop
 
 @section('content')
+    <h2>Edit a Club</h2>
+    <br>
 	
     {{ Form::model($club, ['method' => 'put',
                            'action' => ['ClubController@update', $club->id],

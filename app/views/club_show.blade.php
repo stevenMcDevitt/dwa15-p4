@@ -9,10 +9,12 @@
 @stop
 
 @section('jumbotron')
-    Club Details
+    Figure Skating Clubs
 @stop
 
 @section('content')
+    
+    <h2>Club Details</h2>
 	<br>
     <div>
         ID: {{ $club->id }}
@@ -23,52 +25,16 @@
     <div>
         Club Locality {{ $club->club_locality }}
     </div>
-
-
-    <table class="table">
-    	<tbody>
-    			<tr>
-    				<td>ID</td>
-    				<td> {{ $club->id }} </td>
-    			</tr>
-    			<tr>
-    				<td>Name</td>
-    				<td> {{ $club->club_name }} </td>
-    			</tr>
-    			<tr>
-    				<td>Locality</td>
-    				<td> {{ $club->club_locality }} </td>
-    			</tr>
-    			<tr>
-    				<td> </td>
-    				<td> </td>
-    			</tr>
-    			<tr>
-    				<td>Club Address</td>
-    				<td> {{ $club->club_address1 }} </td>
-    			</tr>
-    			<tr>
-    				<td> </td>
-    				<td> {{ $club->club_city }} {{ $club->club_state }} {{ $club->club_zip }} </td>
-    			</tr>
-    			<tr>
-    				<td> </td>
-    				<td> </td>
-    			</tr>
-       			<tr>
-    				<td>Club Website</td>
-    				<td> {{ $club->club_website }} </td>
-    			</tr>
-    			<tr>
-    				<td> </td>
-    				<td> </td>
-    			</tr>
-       			<tr>
-    				<td>Last Updated</td>
-    				<td> {{ $club->updated_at }} </td>
-    			</tr> 			
-		</tbody>
-	</table>
+    <div>
+       	Club Address {{ $club->club_address1 }}<br>
+        {{ $club->club_city }} {{ $club->club_state }} {{ $club->club_zip }}
+    </div>
+    <div>
+        Club Website {{ $club->club_website }}
+    </div>
+    <div>
+        Last Updated {{ $club->updated_at }}
+    </div>
 
 @stop
 

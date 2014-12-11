@@ -9,12 +9,11 @@
 @stop
 
 @section('jumbotron')
-    Figure Sakting Clubs
+    Figure Skating Clubs
 @stop
 
 @section('content')
-    <br>
-    <h2><a href='/club/create'>+ Add a New Club</a></h2>
+    <h3><a href='/club/create'>+Add a New Club</a></h3>
     <br>
     <p class="bottom-sep"></p>
     <table class="table table-striped table-bordered">
@@ -42,5 +41,7 @@
     		@endforeach
 		</tbody>
 	</table>
+    <p class="bottom-sep"></p>
+    <h3><a href='/club/create'>+Add a New Club</a></h3>
 
 @stop
