@@ -43,6 +43,7 @@ class SkaterController extends \BaseController {
 
 		$skater = new Skater;
 		$skater->last_name = Input::get('last_name');
+		$skater->first_name = Input::get('first_name');
 		$skater->save();
 		return Redirect::action('SkaterController@index')->with('flash_message','The skater added has been saved.');
 
@@ -99,6 +100,7 @@ class SkaterController extends \BaseController {
 		}
 
 		$skater->last_name = Input::get('last_name');
+		$skater->first_name = Input::get('first_name');
 		$skater->save();
 
 		return Redirect::action('SkaterController@index')->with('flash_message','The skater you updated has been saved.');
