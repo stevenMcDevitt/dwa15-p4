@@ -9,7 +9,7 @@
 @stop
 
 @section('jumbotron')
-    Project 4  - Synchronized Skating Team Management System (S2TMS)
+    Project 4  - Synchronized Skating Team Management System (SSTMS)
 @stop
 
 @section('content')

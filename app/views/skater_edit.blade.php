@@ -31,7 +31,38 @@
         {{ Form::label('first_name', 'First Name'); }}
         {{ Form::text('first_name', $skater['first_name'], array('size' => '35', 'placeholder' => 'First Name')); }}
     </div>
-
+    <div>
+        {{ Form::label('email', 'Email'); }}
+        {{ Form::text('email', $skater['email'], array('size' => '35', 'placeholder' => 'name@domain.com')); }}
+    </div>
+    <div>
+        {{ Form::label('date_of_birth', 'Date of Birth'); }}
+        {{ Form::text('date_of_birth', $skater['date_of_birth'], array('size' => '12', 'placeholder' => 'YYYY-MM-DD')); }}
+    </div>
+    <div>
+        {{ Form::label('usfsa_id', 'USFSA ID'); }}
+        {{ Form::text('usfsa_id', $skater['usfsa_id'], array('size' => '10', 'placeholder' => '########')); }}
+    </div>
+    <div>
+        {{ Form::label('synchro_start_year', 'Synchro Start'); }}
+        {{ Form::text('synchro_start_year', $skater['synchro_start_year'], array('size' => '5', 'placeholder' => 'YYYY')); }}
+    </div>
+    <div>
+        {{ Form::label('skating_start_year', 'Skating Start'); }}
+        {{ Form::text('skating_start_year', $skater['skating_start_year'], array('size' => '5', 'placeholder' => 'YYYY')); }}
+    </div>
+    <div>
+        {{ Form::label('moves_test_level', 'Moves Test'); }}
+        {{ Form::text('moves_test_level', $skater['moves_test_level'], array('size' => '22', 'placeholder' => 'Moves Test Level')); }}
+    </div>
+    <div>
+        {{ Form::label('freestyle_test_level', 'Freestyle Test'); }}
+        {{ Form::text('freestyle_test_level', $skater['freestyle_test_level'], array('size' => '22', 'placeholder' => 'Freestyle Test Level')); }}
+    </div>
+    <div>
+        {{ Form::label('notes', 'Skater Notes'); }}
+        {{ Form::textarea('notes', $skater['notes'], array('cols' => '75','rows' => '5', 'placeholder' => 'Notes')); }}
+    </div>
     <br>
     {{ Form::submit('Update'); }}
 

@@ -21,8 +21,13 @@ class CreateSkatersTable extends Migration {
         	$table->string('first_name');
         	$table->date('date_of_birth');
         	$table->float('competition_age');
+        	$table->string('usfsa_id');
+        	$table->string('synchro_start_year');
+        	$table->string('skating_start_year');
         	$table->string('moves_test_level')->nullable;
         	$table->string('freestyle_test_level')->nullable;
+        	$table->string('email');
+        	$table->text('notes');
 
         	$table->timestamps();
 

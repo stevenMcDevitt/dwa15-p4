@@ -42,8 +42,21 @@ class SkaterController extends \BaseController {
 	public function store() {
 
 		$skater = new Skater;
-		$skater->last_name = Input::get('last_name');
-		$skater->first_name = Input::get('first_name');
+
+		$skater->last_name            = Input::get('last_name');
+		$skater->first_name           = Input::get('first_name');
+		$skater->date_of_birth        = Input::get('date_of_birth');
+		$skater->competition_age      = 20;
+        $skater->usfsa_id             = Input::get('usfsa_id');
+
+        $skater->synchro_start_year   = Input::get('synchro_start_year');
+        $skater->skating_start_year   = Input::get('skating_start_year');
+
+        $skater->moves_test_level     = Input::get('moves_test_level');
+        $skater->freestyle_test_level = Input::get('freestyle_test_level');
+        $skater->email                = Input::get('email');
+        $skater->notes                = Input::get('notes');
+
 		$skater->save();
 		return Redirect::action('SkaterController@index')->with('flash_message','The skater added has been saved.');
 
@@ -99,8 +112,20 @@ class SkaterController extends \BaseController {
 			return Redirect::to('/skater')->with('flash_message', 'The skater you selected was not found');
 		}
 
-		$skater->last_name = Input::get('last_name');
-		$skater->first_name = Input::get('first_name');
+		$skater->last_name            = Input::get('last_name');
+		$skater->first_name           = Input::get('first_name');
+		$skater->date_of_birth        = Input::get('date_of_birth');
+		$skater->competition_age      = 20;
+        $skater->usfsa_id             = Input::get('usfsa_id');
+
+        $skater->synchro_start_year   = Input::get('synchro_start_year');
+        $skater->skating_start_year   = Input::get('skating_start_year');
+
+        $skater->moves_test_level     = Input::get('moves_test_level');
+        $skater->freestyle_test_level = Input::get('freestyle_test_level');
+        $skater->email                = Input::get('email');
+        $skater->notes                = Input::get('notes');
+
 		$skater->save();
 
 		return Redirect::action('SkaterController@index')->with('flash_message','The skater you updated has been saved.');
