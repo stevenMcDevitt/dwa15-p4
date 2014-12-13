@@ -21,12 +21,9 @@ class CreateCompetitionTable extends Migration {
         	$table->integer('order_level');
         	$table->integer('min_team_size');
         	$table->integer('max_team_size');
-        	$table->integer('min_education_level');
-        	$table->integer('max_education_level');
         	$table->integer('min_age');
         	$table->integer('max_age');
-        	$table->integer('min_competition_level');
-        	$table->integer('max_competition_level');
+        	$table->integer('min_moves_test_level');
 
         	$table->timestamps();
     	});
