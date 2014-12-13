@@ -62,9 +62,8 @@
 
                     <p class="bottom-sep"></p>
                     
-                            <h2><a href='/teams'> Teams </a>
+                            <h2><a href='/team'> Teams </a>
                             <a href='/skater'> Skaters </a>
-                            <a href='/coaches'> Coaches </a>
                             <a href='/club'> Clubs </a></h2>
 
                     <p class="bottom-sep"></p>
@@ -82,15 +81,17 @@
                 <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
                     <div class="sidebar">
 
-                        <h2>Manage:</h2>
-                        <h2><a href='/teams'> Teams </a><br>
+                        <h3>Manage:</h3>
+                        <h3><a href='/team'> Teams </a><br>
                         <a href='/skater'> Skaters </a><br>
-                        <a href='/coaches'> Coaches </a><br>
-                        <a href='/club'> Clubs </a></h2>
+                        <a href='/club'> Clubs </a></h3>
 
                         <p class="bottom-sep"></p>
 
-                        <h2>It Is The Business Of The Future To Be Dangerous</h2>
+                        <h3>View System Data:</h3>
+                        <h3><a href='/testlevel'> Test Levels </a><br>
+                        <a href='/complevel'> Competition Levels </a></h3>
+
                     </div>
                 </div>
             </div>

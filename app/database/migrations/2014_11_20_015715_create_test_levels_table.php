@@ -16,6 +16,9 @@ class CreateTestLevelsTable extends Migration {
 
         	$table->increments('id')->unsigned();
         	$table->string('test_level_name');
+        	$table->integer('order_level');
+
+        	$table->timestamps();
 
     	});
 	}

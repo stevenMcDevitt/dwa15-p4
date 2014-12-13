@@ -1,9 +1,19 @@
 <?php
 
-class CompetitionTableSeeder extends Seeder {
+class CompetitionLevelTableSeeder extends Seeder {
 
 	public function run()
 	{
+
+                $complevel = Complevel::create(array(
+                'competition_level_name' => "Not Specified",
+                'order_level' => 0,
+                'min_team_size' => 0,
+                'max_team_size' => 0,
+                'min_age' => 0,
+                'max_age' => 0,
+                'min_moves_test_level' => 0
+                ));
 
 		$complevel = Complevel::create(array(
         	'competition_level_name' => "Beginner",

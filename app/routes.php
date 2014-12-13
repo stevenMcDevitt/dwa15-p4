@@ -19,18 +19,21 @@ Route::get('/', function() {
 
 /*
 |--------------------------------------|
-| Skater Routs                         |
+| Test Level Routes                    |
 |--------------------------------------|
 */
 
-Route::resource('skater','SkaterController');
+Route::resource('testlevel','TestlevelController',
+                 array('only' => array('index','show')));
 
 /*
 |--------------------------------------|
-| Team Routes                          |
+| Competition Level Routes             |
 |--------------------------------------|
 */
 
+Route::resource('complevel','ComplevelController',
+                 array('only' => array('index','show')));
 
 /*
 |--------------------------------------|
@@ -38,15 +41,24 @@ Route::resource('skater','SkaterController');
 |--------------------------------------|
 */
 
+Route::resource('club','ClubController',
+                 array('only' => array('index','create','show','store','show','edit','update','destroy')));
+
 /*
-Route::get('/club', 'ClubController@index');
-Route::get('/club/{id}', 'ClubController@show');
+|--------------------------------------|
+| Team Routes                          |
+|--------------------------------------|
 */
 
-/* Route::get('/club/{id}/edit', 'ClubController@edit');
+/* Route::resource('team','TeamController'); */
+
+/*
+|--------------------------------------|
+| Skater Routs                         |
+|--------------------------------------|
 */
 
-Route::resource('club','ClubController');
+Route::resource('skater','SkaterController');
 
 /*
 |--------------------------------------------------------------------------

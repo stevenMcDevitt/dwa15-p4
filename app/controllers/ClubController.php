@@ -9,9 +9,11 @@
 class ClubController extends \BaseController {
 
 /*
-|--------------------------------------|
-| Support for Index Route              |
-|--------------------------------------|
+|---------------------------------------|
+| Support for Index Route               |
+|                                       |
+| GET /club --> index()                 |
+|---------------------------------------|
 */
 	public function index() {
 
@@ -24,9 +26,11 @@ class ClubController extends \BaseController {
 	}
 
 /*
-|--------------------------------------|
-| Create a New Club                    |
-|--------------------------------------|
+|---------------------------------------|
+| Create a New Club                     |
+|                                       |
+| GET /club/create --> create()         |
+|---------------------------------------|
 */
 	public function create() {
 
@@ -35,22 +39,24 @@ class ClubController extends \BaseController {
 	}
 
 /*
-|--------------------------------------|
-| Store Club Data                      |
-|--------------------------------------|
+|---------------------------------------|
+| Store Club Data                       |
+|                                       |
+| POST /club --> store()                |
+|---------------------------------------|
 */
 	public function store() {
 
 		$club = new Club;
 
-		$club->club_name = Input::get('club_name');
+		$club->club_name     = Input::get('club_name');
 		$club->club_locality = Input::get('club_locality');
 		$club->club_address1 = Input::get('club_address1');
 		$club->club_address2 = Input::get('club_address2');
-		$club->club_city = Input::get('club_city');
-		$club->club_state = Input::get('club_state');
-		$club->club_zip = Input::get('club_zip');
-		$club->club_website = Input::get('club_website');
+		$club->club_city     = Input::get('club_city');
+		$club->club_state    = Input::get('club_state');
+		$club->club_zip      = Input::get('club_zip');
+		$club->club_website  = Input::get('club_website');
 
 		$club->save();
 		return Redirect::action('ClubController@index')->with('flash_message','The club added has been saved.');
@@ -58,9 +64,11 @@ class ClubController extends \BaseController {
 	}
 
 /*
-|--------------------------------------|
-| Display Particular Club Data         |
-|--------------------------------------|
+|---------------------------------------|
+| Display Particular Club Data          |
+|                                       |
+| GET /club/{id} --> show()             |
+|---------------------------------------|
 */
 	public function show($id) {
 
@@ -76,9 +84,11 @@ class ClubController extends \BaseController {
 	}
 
 /*
-|--------------------------------------|
-| Display Particular Club Data         |
-|--------------------------------------|
+|---------------------------------------|
+| Display for Edit Particular Club Data |
+|                                       |
+| GET /club/{id}/edit --> edit(id)      |
+|---------------------------------------|
 */
 	public function edit($id) {
 
@@ -94,9 +104,11 @@ class ClubController extends \BaseController {
 	}
 
 /*
-|--------------------------------------|
-| Update Particular Club Data          |
-|--------------------------------------|
+|---------------------------------------|
+| Update Particular Club Data           |
+|                                       |
+| PUT /club/{id} --> update(id)         |
+|---------------------------------------|
 */
 	public function update($id) {
 
@@ -123,9 +135,11 @@ class ClubController extends \BaseController {
 	}
 
 /*
-|--------------------------------------|
-| Display Particular Club Data         |
-|--------------------------------------|
+|---------------------------------------|
+| Delete Data for a Particular Club     |
+|                                       |
+| DELETE /club/{id} --> destroy(id)     |
+|---------------------------------------|
 */
 	public function destroy($id) {
 
