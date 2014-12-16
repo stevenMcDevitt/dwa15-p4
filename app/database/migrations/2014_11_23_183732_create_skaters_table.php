@@ -17,6 +17,10 @@ class CreateSkatersTable extends Migration {
 
         	$table->increments('id')->unsigned();
 
+        	$table->integer('team_id')->unsigned()->default(1);
+        	$table->integer('club_id')->unsigned()->default(1);
+        	$table->integer('testlevel_id')->unsigned()->default(1);
+
         	$table->string('last_name');
         	$table->string('first_name');
         	$table->date('date_of_birth');
@@ -30,6 +34,10 @@ class CreateSkatersTable extends Migration {
         	$table->text('notes');
 
         	$table->timestamps();
+
+        	$table->foreign('team_id')->references('id')->on('teams');
+        	$table->foreign('club_id')->references('id')->on('clubs');
+        	$table->foreign('testlevel_id')->references('id')->on('testlevels');
 
     	});
 

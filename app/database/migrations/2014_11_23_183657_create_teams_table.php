@@ -18,9 +18,13 @@ class CreateTeamsTable extends Migration {
         	$table->increments('id')->unsigned();
 
         	$table->string('team_name');
-        	$table->string('competition_level');
+        	$table->integer('complevel_id')->unsigned()->default(1);
+        	$table->text('program_notes');
+        	$table->text('competition_schedule');
 
         	$table->timestamps();
+
+        	$table->foreign('complevel_id')->references('id')->on('complevels');
     	});
 
 	}

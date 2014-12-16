@@ -5,6 +5,10 @@ class ClubTableSeeder extends Seeder {
         public function run()
 	{
 
+                $club = Club::create(array(
+                        'club_name'     => 'Not Specified'
+                ));
+
 		$club = Club::create(array(
                         'club_name'     => 'Hayden Figure Skating Club',
                         'club_locality' => 'Lexington, MA',
