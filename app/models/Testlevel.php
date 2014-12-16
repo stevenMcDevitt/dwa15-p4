@@ -8,4 +8,17 @@ class Testlevel extends Eloquent {
         return $this->hasMany('Skater');
     }
 
+	public static function getTestlevels() {
+		
+		$testlevels = Array();
+
+		$collection = Testlevel::all();
+
+		foreach($collection as $testlevel) {
+			$testlevels[$testlevel->id] = $testlevel->test_level_name;
+		}
+		return $testlevels;
+	}
+
+
 }

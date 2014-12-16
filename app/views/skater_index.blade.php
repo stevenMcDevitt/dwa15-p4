@@ -21,18 +21,20 @@
     		<tr>
     			<th class="col-md-1">Id</th>
     			<th class="col-md-4">Name</th>
-                <th class="col-md-3">Age</th>
+                <th class="col-md-1">Age</th>
+                <th class="col-md-2">Test Level</th>
     			<th class="col-md-1"></th>
     		</tr>
     	</thead>
     	<tbody>
     		@foreach($skaters as $skater)
     			<tr>
-    				<td>{{$skater->id}}</td>
-    				<td>{{$skater->last_name}}, {{$skater->first_name}}</td>
-                    <td>{{$skater->competition_age}}</td>
-    				<td><a href='/skater/{{$skater->id}}'>Details</a>
-    				    <a href='/skater/{{$skater->id}}/edit'>Edit</a>
+    				<td>{{ $skater->id }}</td>
+    				<td>{{ $skater->last_name }}, {{ $skater->first_name }}</td>
+                    <td>{{ $skater->competition_age }}</td>
+                    <td>{{ $skater->testlevel->test_level_name }}</td>
+    				<td><a href='/skater/{{ $skater->id }}'>Details</a>
+    				    <a href='/skater/{{ $skater->id }}/edit'>Edit</a>
                     </td>
     			</tr>
     		@endforeach

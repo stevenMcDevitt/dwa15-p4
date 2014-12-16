@@ -15,7 +15,8 @@ class SkaterController extends \BaseController {
 */
 	public function index() {
 
-		$skaters = Skater::where('id','<>',0)
+		$skaters = Skater::with('testlevel')
+			->where('id','<>',0)
 			->orderBy('last_name')
 			->get();
 		
@@ -88,13 +89,16 @@ class SkaterController extends \BaseController {
 	public function edit($id) {
 
 		try {
-			$skater = Skater::findOrFail($id);
+			$skater     = Skater::findOrFail($id);
+			$testlevels = Testlevel::getTestlevels();
 		}
 		catch(Exception $e) {
 			return Redirect::to('/skater')->with('flash_message', 'The skater you were seeking was not found');
 		}
 
-		return View::make('skater_edit')->with('skater', $skater);
+		return View::make('skater_edit')
+					->with('skater', $skater)
+					->with('testlevels',$testlevels);
 
 	}
 
@@ -115,8 +119,11 @@ class SkaterController extends \BaseController {
 		$skater->last_name            = Input::get('last_name');
 		$skater->first_name           = Input::get('first_name');
 		$skater->date_of_birth        = Input::get('date_of_birth');
-		$skater->competition_age      = 20;
         $skater->usfsa_id             = Input::get('usfsa_id');
+
+       	$skater->team_id              = 1;
+       	$skater->club_id              = 1;
+       	$skater->testlevel_id         = Input::get('testlevel_id');
 
         $skater->synchro_start_year   = Input::get('synchro_start_year');
         $skater->skating_start_year   = Input::get('skating_start_year');

@@ -52,9 +52,10 @@
         {{ Form::text('skating_start_year', $skater['skating_start_year'], array('size' => '5', 'placeholder' => 'YYYY')); }}
     </div>
     <div>
-        {{ Form::label('moves_test_level', 'Moves Test'); }}
-        {{ Form::text('moves_test_level', $skater['moves_test_level'], array('size' => '22', 'placeholder' => 'Moves Test Level')); }}
-    </div>
+        {{ Form::label('testlevel_id', 'Moves Test') }}
+        {{ Form::select('testlevel_id', $testlevels, $skater->testlevel_id); }}
+    <br/>
+   </div>
     <div>
         {{ Form::label('freestyle_test_level', 'Freestyle Test'); }}
         {{ Form::text('freestyle_test_level', $skater['freestyle_test_level'], array('size' => '22', 'placeholder' => 'Freestyle Test Level')); }}

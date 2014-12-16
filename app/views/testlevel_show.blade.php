@@ -23,7 +23,7 @@
         Name: {{ $testlevel->test_level_name }}
     </div>
     <div>
-        Last Updated {{ $complevel->updated_at }}
+        Last Updated {{ $testlevel->updated_at }}
     </div>
 
 @stop
