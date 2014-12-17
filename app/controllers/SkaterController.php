@@ -16,7 +16,7 @@ class SkaterController extends \BaseController {
 	public function index() {
 
 		$skaters = Skater::with('testlevel')
-			->where('id','<>',0)
+			->where('id','>',1)
 			->orderBy('last_name')
 			->get();
 		

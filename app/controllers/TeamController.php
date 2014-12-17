@@ -155,6 +155,10 @@ class TeamController extends \BaseController {
 			return Redirect::to('/team')->with('flash_message', 'The team you selected was not found');
 		}
 
+		DB::table('skaters')
+			->where('team_id',$id)
+			->update(array('team_id' => 1));
+
 		Team::destroy($id);
 
 		return Redirect::action('TeamController@index')->with('flash_message','The team you selected has been deleted.');

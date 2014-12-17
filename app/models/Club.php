@@ -12,7 +12,9 @@ class Club extends Eloquent {
 		
 		$clubs = Array();
 
-		$collection = Club::all();
+		$collection = Club::where('id','>',0)
+			->orderBy('club_name')
+			->get();
 
 		foreach($collection as $club) {
 			$clubs[$club->id] = $club->club_name;

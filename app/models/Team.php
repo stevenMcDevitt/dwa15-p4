@@ -18,7 +18,9 @@ class Team extends Eloquent {
 		
 		$teams = Array();
 
-		$collection = Team::all();
+		$collection = Team::where('id','>',0)
+			->orderBy('team_name')
+			->get();
 
 		foreach($collection as $team) {
 			$teams[$team->id] = $team->team_name;

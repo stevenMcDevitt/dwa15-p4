@@ -17,7 +17,7 @@ class ClubController extends \BaseController {
 */
 	public function index() {
 
-		$clubs = Club::where('id','<>',0)
+		$clubs = Club::where('id','>',1)
 			->orderBy('club_name')
 			->get();
 		
@@ -149,6 +149,10 @@ class ClubController extends \BaseController {
 		catch(Exception $e) {
 			return Redirect::to('/club')->with('flash_message', 'The club you selected was not found');
 		}
+
+		DB::table('skaters')
+			->where('club_id',$id)
+			->update(array('club_id' => 1));
 
 		Club::destroy($id);
 
