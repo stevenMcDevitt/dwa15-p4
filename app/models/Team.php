@@ -14,4 +14,16 @@ class Team extends Eloquent {
         return $this->belongsTo('Complevel');
     }
 
+	public static function getTeams() {
+		
+		$teams = Array();
+
+		$collection = Team::all();
+
+		foreach($collection as $team) {
+			$teams[$team->id] = $team->team_name;
+		}
+		return $teams;
+	}
+
 }

@@ -8,4 +8,16 @@ class Club extends Eloquent {
         return $this->hasMany('Skater');
     }
 
+	public static function getClubs() {
+		
+		$clubs = Array();
+
+		$collection = Club::all();
+
+		foreach($collection as $club) {
+			$clubs[$club->id] = $club->club_name;
+		}
+		return $clubs;
+	}
+
 }

@@ -8,4 +8,15 @@ class Complevel extends Eloquent {
         return $this->hasMany('Team');
 	}
 
+	public static function getComplevels() {
+		
+		$complevels = Array();
+
+		$collection = Complevel::all();
+
+		foreach($collection as $complevel) {
+			$complevels[$complevel->id] = $complevel->competition_level_name;
+		}
+		return $complevels;
+	}
 }

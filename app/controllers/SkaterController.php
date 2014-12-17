@@ -31,7 +31,19 @@ class SkaterController extends \BaseController {
 */
 	public function create() {
 
-		return View::make('skater_create');
+		try {
+			$testlevels = Testlevel::getTestlevels();
+			$clubs      = Club::getClubs();
+			$teams      = Team::getTeams();
+		}
+		catch(Exception $e) {
+			return Redirect::to('/skater')->with('flash_message', 'System data problem');
+		}
+
+		return View::make('skater_create')
+					->with('testlevels',$testlevels)
+					->with('clubs',$clubs)
+					->with('teams',$teams);
 
 	}
 
@@ -47,14 +59,15 @@ class SkaterController extends \BaseController {
 		$skater->last_name            = Input::get('last_name');
 		$skater->first_name           = Input::get('first_name');
 		$skater->date_of_birth        = Input::get('date_of_birth');
-		$skater->competition_age      = 20;
         $skater->usfsa_id             = Input::get('usfsa_id');
+
+       	$skater->team_id              = Input::get('team_id');
+       	$skater->club_id              = Input::get('club_id');
+       	$skater->testlevel_id         = Input::get('testlevel_id');
 
         $skater->synchro_start_year   = Input::get('synchro_start_year');
         $skater->skating_start_year   = Input::get('skating_start_year');
 
-        $skater->moves_test_level     = Input::get('moves_test_level');
-        $skater->freestyle_test_level = Input::get('freestyle_test_level');
         $skater->email                = Input::get('email');
         $skater->notes                = Input::get('notes');
 
@@ -91,6 +104,8 @@ class SkaterController extends \BaseController {
 		try {
 			$skater     = Skater::findOrFail($id);
 			$testlevels = Testlevel::getTestlevels();
+			$clubs      = Club::getClubs();
+			$teams      = Team::getTeams();
 		}
 		catch(Exception $e) {
 			return Redirect::to('/skater')->with('flash_message', 'The skater you were seeking was not found');
@@ -98,7 +113,9 @@ class SkaterController extends \BaseController {
 
 		return View::make('skater_edit')
 					->with('skater', $skater)
-					->with('testlevels',$testlevels);
+					->with('testlevels',$testlevels)
+					->with('clubs',$clubs)
+					->with('teams',$teams);
 
 	}
 
@@ -121,15 +138,13 @@ class SkaterController extends \BaseController {
 		$skater->date_of_birth        = Input::get('date_of_birth');
         $skater->usfsa_id             = Input::get('usfsa_id');
 
-       	$skater->team_id              = 1;
-       	$skater->club_id              = 1;
+       	$skater->team_id              = Input::get('team_id');
+       	$skater->club_id              = Input::get('club_id');
        	$skater->testlevel_id         = Input::get('testlevel_id');
 
         $skater->synchro_start_year   = Input::get('synchro_start_year');
         $skater->skating_start_year   = Input::get('skating_start_year');
 
-        $skater->moves_test_level     = Input::get('moves_test_level');
-        $skater->freestyle_test_level = Input::get('freestyle_test_level');
         $skater->email                = Input::get('email');
         $skater->notes                = Input::get('notes');
 

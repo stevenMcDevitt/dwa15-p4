@@ -20,5 +20,4 @@ class Testlevel extends Eloquent {
 		return $testlevels;
 	}
 
-
 }

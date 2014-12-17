@@ -52,14 +52,18 @@
         {{ Form::text('skating_start_year', $skater['skating_start_year'], array('size' => '5', 'placeholder' => 'YYYY')); }}
     </div>
     <div>
+        {{ Form::label('club_id', 'Club'); }}
+        {{ Form::select('club_id', $clubs, $skater->club_id); }}
+    </div>
+    <div>
+        {{ Form::label('team_id', 'Team'); }}
+        {{ Form::select('team_id', $teams, $skater->team_id); }}
+    </div> 
+    <div>
         {{ Form::label('testlevel_id', 'Moves Test') }}
         {{ Form::select('testlevel_id', $testlevels, $skater->testlevel_id); }}
     <br/>
    </div>
-    <div>
-        {{ Form::label('freestyle_test_level', 'Freestyle Test'); }}
-        {{ Form::text('freestyle_test_level', $skater['freestyle_test_level'], array('size' => '22', 'placeholder' => 'Freestyle Test Level')); }}
-    </div>
     <div>
         {{ Form::label('notes', 'Skater Notes'); }}
         {{ Form::textarea('notes', $skater['notes'], array('cols' => '75','rows' => '5', 'placeholder' => 'Notes')); }}

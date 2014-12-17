@@ -50,7 +50,9 @@ Route::resource('club','ClubController',
 |--------------------------------------|
 */
 
-/* Route::resource('team','TeamController'); */
+Route::resource('team','TeamController',
+                 array('only' => array('index','create','show','store','show','edit','update','destroy')));
+
 
 /*
 |--------------------------------------|
@@ -58,7 +60,8 @@ Route::resource('club','ClubController',
 |--------------------------------------|
 */
 
-Route::resource('skater','SkaterController');
+Route::resource('skater','SkaterController',
+                 array('only' => array('index','create','show','store','show','edit','update','destroy')));
 
 /*
 |--------------------------------------------------------------------------
