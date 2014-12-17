@@ -19,6 +19,7 @@ class CreateClubTable extends Migration {
 
         	$table->string('club_name');
         	$table->string('club_locality');
+        	$table->integer('display_order');
 
         	$table->string('club_address1');
         	$table->string('club_address2');

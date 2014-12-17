@@ -18,8 +18,8 @@ class Team extends Eloquent {
 		
 		$teams = Array();
 
-		$collection = Team::where('id','>',0)
-			->orderBy('team_name')
+		$collection = Team::orderBy('display_order','ASC')
+			->orderBy('team_name', 'ASC')
 			->get();
 
 		foreach($collection as $team) {

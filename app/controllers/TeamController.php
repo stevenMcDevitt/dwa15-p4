@@ -59,6 +59,7 @@ class TeamController extends \BaseController {
 		$team = new Team;
 
 		$team->team_name            = Input::get('team_name');
+		$team->display_order        = 1;
 		$team->complevel_id         = Input::get('complevel_id');
 		$team->program_notes        = Input::get('program_notes');
 		$team->competition_schedule = Input::get('competition_schedule');
@@ -79,13 +80,16 @@ class TeamController extends \BaseController {
 	public function show($id) {
 
 		try {
-			$team = Team::findOrFail($id);
+			$team    = Team::findOrFail($id);
+			$skaters = Skater::getTeamSkaters($id);
 		}
 		catch(Exception $e) {
 			return Redirect::to('/team')->with('flash_message', 'The team you were seeking was not found');
 		}
 
-		return View::make('team_show')->with('team', $team);
+		return View::make('team_show')
+			->with('team', $team)
+			->with('skaters', $skaters);
 
 	}
 
@@ -129,6 +133,7 @@ class TeamController extends \BaseController {
 		}
 
 		$team->team_name            = Input::get('team_name');
+		$team->display_order        = 1;
 		$team->complevel_id         = Input::get('complevel_id');
 		$team->program_notes        = Input::get('program_notes');
 		$team->competition_schedule = Input::get('competition_schedule');

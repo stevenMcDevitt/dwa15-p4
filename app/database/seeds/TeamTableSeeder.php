@@ -7,6 +7,7 @@ class TeamTableSeeder extends Seeder {
 
                 $team = Team::create(array(
                         'team_name'     => 'Not Specified',
+                        'display_order' => '0',
                         'complevel_id'  => '1'
                 ));
 

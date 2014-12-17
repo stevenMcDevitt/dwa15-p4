@@ -6,11 +6,13 @@ class ClubTableSeeder extends Seeder {
 	{
 
                 $club = Club::create(array(
-                        'club_name'     => 'Not Specified'
+                        'club_name'     => 'Not Specified',
+                        'display_order' => '0'
                 ));
 
 		$club = Club::create(array(
                         'club_name'     => 'Hayden Figure Skating Club',
+                        'display_order' => '1',
                         'club_locality' => 'Lexington, MA',
                         'club_address1' => '24 Lincoln St',
                         'club_address2' => 'Suite 12',
@@ -22,6 +24,7 @@ class ClubTableSeeder extends Seeder {
 
                 $club = Club::create(array(
                         'club_name'     => 'Colonial Skating Club',
+                        'display_order' => '1',
                         'club_locality' => 'Boxborough, MA',
                         'club_address1' => '34 Massachusetts Ave',
                         'club_address2' => '',
@@ -33,6 +36,7 @@ class ClubTableSeeder extends Seeder {
 
                 $club = Club::create(array(
                         'club_name'     => 'Skating Club of Boston',
+                        'display_order' => '1',
                         'club_locality' => 'Boston, MA',
                         'club_address1' => '1240 Soldiers Field Rd',
                         'club_address2' => '',
@@ -44,36 +48,43 @@ class ClubTableSeeder extends Seeder {
 
                 $club = Club::create(array(
                         'club_name' => 'Commonwealth Figure Skating Club',
+                        'display_order' => '1',
                         'club_locality' => 'Randolph, MA'
                 ));
 
                 $club = Club::create(array(
                         'club_name' => 'Northstar Figure Skating Club',
+                        'display_order' => '1',
                         'club_locality' => 'Westborough, MA'
                 ));
 
                 $club = Club::create(array(
                         'club_name' => 'Peabody Figure Skating Club',
+                        'display_order' => '1',
                         'club_locality' => 'Peabody, MA'
                 ));
 
                 $club = Club::create(array(
                         'club_name' => 'Wilmington Figure Skating Club',
+                        'display_order' => '1',
                         'club_locality' => 'Wilmington, MA'
                 ));
 
                 $club = Club::create(array(
                         'club_name' => 'Pilgrim Figure Skating Club',
+                        'display_order' => '1',
                         'club_locality' => 'Pembroke, MA'
                 ));
 
                 $club = Club::create(array(
                         'club_name' => 'Wallace Figure Skating Club',
+                        'display_order' => '1',
                         'club_locality' => 'Fitchburg, MA'
                 ));
 
                 $club = Club::create(array(
                         'club_name' => 'Bourne Figure Skating Club',
+                        'display_order' => '1',
                         'club_locality' => 'Buzzards Bay, MA'
                 ));
 	}

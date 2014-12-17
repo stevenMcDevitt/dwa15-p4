@@ -50,6 +50,7 @@ class ClubController extends \BaseController {
 		$club = new Club;
 
 		$club->club_name     = Input::get('club_name');
+		$club->display_order = 1;
 		$club->club_locality = Input::get('club_locality');
 		$club->club_address1 = Input::get('club_address1');
 		$club->club_address2 = Input::get('club_address2');
@@ -120,6 +121,7 @@ class ClubController extends \BaseController {
 		}
 
 		$club->club_name     = Input::get('club_name');
+		$club->display_order = 1;
 		$club->club_locality = Input::get('club_locality');
 		$club->club_address1 = Input::get('club_address1');
 		$club->club_address2 = Input::get('club_address2');

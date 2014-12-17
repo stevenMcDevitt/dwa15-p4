@@ -18,6 +18,7 @@ class CreateTeamsTable extends Migration {
         	$table->increments('id')->unsigned();
 
         	$table->string('team_name');
+        	$table->integer('display_order');
         	$table->integer('complevel_id')->unsigned()->default(1);
         	$table->text('program_notes');
         	$table->text('competition_schedule');
